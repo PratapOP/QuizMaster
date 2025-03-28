@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster - Test Your Knowledge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>QuizMaster</h1>
+            <nav>
+                <button class="nav-btn" onclick="window.location.href='index.html'">Home Page</button>
+                <button class="nav-btn" onclick="showQuizTopicsAlert()">Quiz Topic</button>
+                <button class="nav-btn" onclick="showLearnMore()">Want to Learn More</button>
+                <button class="nav-btn" onclick="showPreviousScores()">Previous Scores</button>
+                <button class="nav-btn" onclick="window.location.href='about.html'">Contact the Creator!</button>
+            </nav>
+        </header>
+        
+        <h2>Test your knowledge across various topics</h2>
+        <p>
+            Welcome to QuizMaster! Here you can test your knowledge on various topics and see how you stack up against others. 
+            Choose a quiz from the list below and see how well you do. 
+            You can also view your previous scores to see how you have improved over time.
+        </p>
+        
+        <main id="main-content">
+            <!-- Content will be dynamically loaded here -->
+            <div class="quiz-heading">
+                <h2>Available Quizzes</h2>
+            </div>
+            <section class="quiz-section">
+                <div class="quiz-card">
+                    <h3>General Knowledge Quiz</h3>
+                    <p>Test your knowledge about the world</p>
+                    <button class="quiz-btn" onclick="startQuiz('generalKnowledge')">Start Quiz</button>
+                    <button class="learn-more-btn" onclick="learnMore('general')">Learn More</button>
+                </div>
+                
+                <div class="quiz-card">
+                    <h3>Java Quiz</h3>
+                    <p>Challenge your Java programming skills</p>
+                    <button class="quiz-btn" onclick="startQuiz('javaQuiz')">Start Quiz</button>
+                    <button class="learn-more-btn" onclick="learnMore('java')">Learn More</button>
+                </div>
+                
+                <div class="quiz-card">
+                    <h3>Web Development Quiz</h3>
+                    <p>HTML, CSS, JavaScript and more</p>
+                    <button class="quiz-btn" onclick="startQuiz('webDevQuiz')">Start Quiz</button>
+                    <button class="learn-more-btn" onclick="learnMore('webdev')">Learn More</button>
+                </div>
+                
+                <div class="quiz-card">
+                    <h3>Python Quiz</h3>
+                    <p>Python programming concepts</p>
+                    <button class="quiz-btn" onclick="startQuiz('pythonQuiz')">Start Quiz</button>
+                    <button class="learn-more-btn" onclick="learnMore('python')">Learn More</button>
+                </div>
+            </section>
+            
+            <section class="scores-section" id="scores-section">
+                <h2>Previous Scores</h2>
+                <table id="scores-table">
+                    <thead>
+                        <tr>
+                            <th>Quiz Name</th>
+                            <th>Score</th>
+                            <th>Date of Submission</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Scores will be loaded dynamically -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2023 QuizMaster. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
